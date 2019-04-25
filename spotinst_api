@@ -1,37 +1,19 @@
 curl -X POST \ 
-
   'https://api.spotinst.io/aws/ec2/statefulMigrationGroup?accountId={act-1234xyz}’ \ 
-
   -H 'Authorization: Bearer <authorization_token>’ \ 
-
   -H 'Content-Type: application/json' \ 
-
   -H 'Postman-Token: <postman_token>' \ 
-
   -H 'cache-control: no-cache' \ 
-
   -d '{ 
-
  "statefulMigrationGroup": { 
-
      "shouldKeepPrivateIp": true, 
-
      "originalInstanceId": "'"$instance_id"'", 
-
      "name": "'"$instance_name"'", 
-
      "product": "Linux/UNIX", 
-
      "spotInstanceTypes": [ 
-
          "t3.small", 
-
          "t3.medium" 
-
      ], 
-
      "region": “<region_name>” 
-
   } 
-
-}' 
+}'
